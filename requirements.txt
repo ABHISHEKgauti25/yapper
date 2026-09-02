@@ -1,0 +1,12 @@
+# Yapper — runtime dependencies (CPU-only, no GPU, no PyTorch)
+#
+# Speech-to-text runs on CTranslate2 via faster-whisper — a small, fast CPU engine.
+# faster-whisper pulls in ctranslate2, tokenizers and huggingface_hub (used to download the
+# model). No torch / transformers / onnxruntime at runtime.
+
+faster-whisper>=1.0
+
+numpy>=1.24
+sounddevice>=0.4
+pynput>=1.7
+PySide6>=6.6

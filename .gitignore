@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+
+# Yapper runtime cache (model export, config, first-run marker)
+# (users' machines only — never commit)
+.yapper/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NOTE: models/ (the bundled int8 CTranslate2 model) IS committed, so Yapper works offline
+# out of the box. Models downloaded from Hugging Face go to the HF cache, not here.
