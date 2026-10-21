@@ -9,7 +9,7 @@ from pathlib import Path
 
 REPOS = {
     "tiny": "abhishekgautamm/whisper-tiny-hinglish-v2",
-    "base": "abhishekgautamm/whisper-base-hinglish-v2",
+    "base": "abhishekgautamm/whisper-base-hinglish",
 }
 SIZES_MB = {("tiny", "int8"): 41, ("tiny", "fp32"): 151, ("base", "int8"): 76, ("base", "fp32"): 290}
 BUNDLED = Path(__file__).resolve().parent.parent / "models" / "whisper-tiny-hinglish-v2-int8"
