@@ -1,13 +1,5 @@
-"""
-Yapper — the mascot status widget.
-
-Renders the terracotta bird mascot (SVG + CSS state animations)
-in a transparent, frameless, always-on-top web view: just the mascot + a small toast ABOVE it,
-no card background, click-through. State is driven from the controller via set_state().
-
-Size is configurable (small / medium / large; medium default) — the mascot, window and toast
-text all scale together.
-"""
+"""Terracotta-bird status mascot: a transparent, frameless, always-on-top web
+view showing the bird + a small toast, driven by set_state() from the controller."""
 from __future__ import annotations
 
 import json
@@ -96,7 +88,7 @@ _CSS = """
   [data-state="error"] .tuffet-crest{transform:translateY(4px) scaleY(.7)}
   @keyframes breathe{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-2px) scale(1.02,1.03)}}
   @keyframes blink{0%,91%,100%{transform:scaleY(1)}94%,97%{transform:scaleY(.08)}}
-  @keyframes wake{0%,68%,100%{transform:translateY(0) scale(1)}12%{transform:translateY(4px) scale(1.05,.94)}26%{transform:translateY(-10px) scale(.96,1.06)}44%{transform:translateY(0) scale(1.03,.97)}}
+  @keyframes wake{0%,68%,100%{transform:translateY(0) scale(1)}12%{transform:translateY(3px) scale(1.02,.98)}26%{transform:translateY(-6px) scale(.99,1.03)}44%{transform:translateY(0) scale(1.02,.99)}}
   @keyframes crest-alert{0%,68%,100%{transform:scaleY(1)}20%,40%{transform:translateY(-4px) scaleY(1.34)}}
   @keyframes listen-bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-3px) rotate(1deg)}}
   @keyframes crest-listen{0%,100%{transform:translateY(-3px) scaleY(1.27) rotate(-2deg)}50%{transform:translateY(-5px) scaleY(1.4) rotate(2deg)}}
@@ -104,7 +96,7 @@ _CSS = """
   @keyframes wing{0%,100%{transform:rotate(0)}50%{transform:rotate(-9deg)}}
   @keyframes think{0%,100%{transform:rotate(-3deg) translateY(0)}50%{transform:rotate(4deg) translateY(-1px)}}
   @keyframes orbit{to{transform:rotate(360deg)}}
-  @keyframes success{from{transform:translateY(0) scale(1)}to{transform:translateY(-4px) scale(1.05)}}
+  @keyframes success{from{transform:translateY(0) scale(1)}to{transform:translateY(-3px) scale(1.02)}}
   @keyframes error-shake{0%,55%,100%{transform:translateX(0) rotate(0)}63%{transform:translateX(-3px) rotate(-2deg)}72%{transform:translateX(3px) rotate(2deg)}81%{transform:translateX(-2px) rotate(-1deg)}90%{transform:translateX(1px) rotate(1deg)}}
   @keyframes wave{0%,100%{transform:scaleY(.4);opacity:.6}50%{transform:scaleY(1);opacity:1}}
   .toast{display:none;align-items:center;gap:8px;padding:6px 12px 6px 10px;border-radius:999px;

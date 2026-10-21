@@ -1,9 +1,4 @@
-"""
-Global push-to-talk hotkey via pynput. Fires on_start when the chosen key goes down and
-on_stop when it is released. Auto-repeat while held is de-bounced.
-
-Default key is Right Ctrl (`ctrl_r`) so normal Ctrl+C/V shortcuts keep working.
-"""
+"""Global push-to-talk hotkey (pynput): on_start on key-down, on_stop on release."""
 from __future__ import annotations
 
 from typing import Callable

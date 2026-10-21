@@ -15,5 +15,5 @@ dist/
 .DS_Store
 Thumbs.db
 
-# NOTE: models/ (the bundled int8 CTranslate2 model) IS committed, so Yapper works offline
-# out of the box. Models downloaded from Hugging Face go to the HF cache, not here.
+# NOTE: models/whisper-tiny-hinglish-v2-int8 (the bundled default-offline model) IS committed.
+# Other models download to ~/.yapper/models/ on first use - never into the repo.

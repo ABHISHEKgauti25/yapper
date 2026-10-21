@@ -1,7 +1,4 @@
-"""Send a Ctrl+V to the focused window (used after putting text on the clipboard).
-
-Uses the generic (left) Ctrl so it never collides with a Right-Ctrl push-to-talk hotkey.
-"""
+"""Paste into the focused window via Ctrl+V (left Ctrl, so it won't clash with Right-Ctrl PTT)."""
 from __future__ import annotations
 
 import time
